@@ -11,16 +11,16 @@ public class RandomJuego {
 
     public void mostrar() {
         for (int i = 0; i < numeros.length; i++) {//For para ingresar los números por teclado.
-            System.out.print("Ingrese un número para el sorteo: ");
+            System.out.print("Ingrese un número para la posición: " + i +" en el sorteo: ");
             numeros[i] = sc.nextInt();
             for (int j = 0; j < i; j++) { //For para recorrer los números ingresados por teclado.
                 if (numeros[i] == numeros[j]) {//Condición para comparar si los números ingresados son iguales.
                     cont = 1;
+                    System.out.println("Error Ingresaste números repetidos");
+                    i--;
+                    
                 }
             }
-        }
-        if (cont == 1) {// Condición para  mostrar mensaje de números repetidos.
-            System.out.println("Error Ingresaste números repetidos");
         }
     }
 
